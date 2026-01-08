@@ -16,8 +16,5 @@ public:
                 ++idx1;
             }
         }
-        for (; idx1 < nums.size(); ++idx1) {
-            nums[idx1] = 0;
-        }
     }
 };
