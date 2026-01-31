@@ -12,32 +12,31 @@
 
 using namespace std;
 
-// Definition for a binary tree node.
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
-
-
 class Solution {
 public:
-    int maxPathSum(TreeNode* root) {
-        int ans = INT_MIN;
-        helper(root, ans);
+    int numIslands(vector<vector<char>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+        int ans = 0;
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < m; ++j) {
+                if (grid[i][j] == '1') {
+                    search(grid, i, j, n, m);
+                    ++ans;
+                }
+            }
+        }
         return ans;
     }
 
-    int helper(TreeNode* root, int &val) {
-        if (root == nullptr) {
-            return 0;
+    void search(vector<vector<char>>& grid, int i, int j, int n, int m) {
+        if (i < 0 || j < 0 || i >= n || j >= m || grid[i][j] == '0') {
+            return;
         }
-        int left = max(helper(root->left, val), 0);
-        int right = max(helper(root->right, val), 0);
-        val = max(left + right + root->val, val);
-        return max(left + root->val, right + root->val);
+        grid[i][j] = '0';
+        search(grid, i - 1, j, n, m);
+        search(grid, i + 1, j, n, m);
+        search(grid, i, j - 1, n, m);
+        search(grid, i, j + 1, n, m);
     }
 };
