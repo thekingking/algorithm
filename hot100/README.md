@@ -2,6 +2,7 @@
 
 10
 11
+[84](https://leetcode.cn/problems/perfect-squares/?envType=study-plan-v2&envId=top-100-liked)
 
 ## 重点题
 
