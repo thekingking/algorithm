@@ -13,3 +13,4 @@
 [90](https://leetcode.cn/problems/longest-valid-parentheses?envType=study-plan-v2&envId=top-100-liked)
 [95](https://leetcode.cn/problems/edit-distance/description/?envType=study-plan-v2&envId=top-100-liked)
 [96](https://leetcode.cn/problems/single-number/description/?envType=study-plan-v2&envId=top-100-liked)
+[99](https://leetcode.cn/problems/next-permutation/?envType=study-plan-v2&envId=top-100-liked)
