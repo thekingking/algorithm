@@ -1,5 +1,6 @@
 {
     "github.copilot.enable": {
         "*": false
-    }
+    },
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc"
 }
